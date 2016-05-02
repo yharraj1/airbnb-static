@@ -1,0 +1,34 @@
+.img-circle{
+  width: 100px;
+  border: solid;
+  border-color: grey;
+}
+
+
+
+.text-center p, h1{
+  color: white;
+
+}
+
+.banner-flat {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-enable {
+  color: $yellow-star
+}
+
+.star-disable {
+  color: $gray-light;
+}
+
+#flat-form btn{
+  width: 100%;
+}

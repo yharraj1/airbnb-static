@@ -1,0 +1,16 @@
+Discover:
+  image: globe.png
+  title: Discover the world
+  description: The earth is your new home
+Pay:
+  image: dollar.png
+  title: Pay online
+  description: No cash issues anymore
+drink:
+  image: beer.png
+  title: Meet people
+  description: Discover new culture and lifestyle
+love:
+  image: heart.png
+  title: Share and love
+  description: Join a community you will love

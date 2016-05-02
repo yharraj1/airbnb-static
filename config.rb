@@ -78,6 +78,11 @@ configure :build do
   activate :build_cleaner
 end
 
+["anne", "seb", "romain"].each do |name|
+  proxy "/flats/#{name}.html", "/flats/show.html", :locals => { :owner_name => name }, :ignore => true
+end
+
+
 # Deployment
 activate :deploy do |deploy|
   deploy.method = :git

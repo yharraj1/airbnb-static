@@ -1,0 +1,103 @@
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner_name] %>
+
+<!-- Inject flat data in template -->
+<div class="banner-flat" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/paris.jpg');">
+  <div class="text-center">
+    <%= image_tag flat.owner_picture, class: "img-circle" %>
+    <p><%= flat.owner_name %></p>
+    <h1><%= flat.description %></h1>
+    <p><%= flat.city %></p>
+  </div>
+</div>
+
+
+
+<div id="flat-description">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>About this flat</h2>
+        <p><%= flat.summary %></p>
+        <p>
+          <% (1..5).each do |star| %>
+            <i class="fa fa-star <%= star <= flat.rating ? 'star-enable':'star-disable' %>"></i>
+          <% end %>
+        </p>
+        <hr>
+        <div class="row" id="flat-data">
+          <div class="col-xs-12 col-sm-2">
+            The Space
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Accommodates: <strong><%=flat.capacity%></strong></li>
+              <li>Bathrooms:  <strong><%=flat.bathrooms%></strong></li>
+              <li>Bed type:  <strong><%=flat.bed_type%></strong></li>
+              <li>Bedrooms:  <strong><%=flat.bedrooms%></strong></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-unstyled">
+              <li>Beds: <strong><%=flat.beds%></strong></li>
+              <li>Property type: <strong><%=flat.property_type%></strong></li>
+              <li>Room type: <strong><%=flat.room_type%></strong></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row" id="flat-data">
+          <div class="col-xs-12 col-sm-2">
+            Amenities
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <ul class="list-inline">
+              <% if flat.kitchen %>
+              <li><i class="fa fa-cutlery"></i></li>
+              <% end %>
+              <% if flat.wifi %>
+              <li><i class="fa fa-wifi"></i></li>
+              <% end %>
+              <% if flat.tv %>
+              <li><i class="fa fa-desktop"></i></li>
+              <% end %>
+              <% if flat.welcome_drink %>
+              <li><i class="fa fa-glass"></i></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="col-sx-12 col-sm-4">
+          <h2>Book this flat</h2>
+          <form action="">
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-6">
+                  <input type="text" class="form-control" placeholder="checkin" id="checkin">
+                </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control" placeholder="checkout">
+                </div>
+              </div>
+             </div>
+              <div class="form-group">
+                <select name="1" id="" class="form-control">
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                </select>
+              </div>
+              </div>
+              <div class="btn btn-primary">
+
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
