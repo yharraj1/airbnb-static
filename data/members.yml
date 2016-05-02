@@ -1,0 +1,18 @@
+seb:
+  city: Paris
+  description: Seb's home
+  summary: Charming room with patio
+  image: card-paris.jpeg
+  avatar: seb.jpg
+Anne:
+  city: Brussels
+  description: Anne's home
+  summary: Lovely house
+  image: card-brussels.jpeg
+  avatar: anne.jpg
+romain:
+  city: London
+  description: Romain's home
+  summary: Nice flat in Piccadilly
+  image: card-london.jpeg
+  avatar: romain.jpg
